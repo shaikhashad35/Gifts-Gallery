@@ -1,0 +1,110 @@
+<!doctype html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>
+        Gifts Gallery
+    </title>
+   
+        
+    </head>
+    <body>
+        <div class="header">
+            <a href="#default" class="logo">Gifts Gallery</a>
+            <div class="header-right">
+                <a class="_blank" href="mailto:sales@yourcompany.com" target="_blank">
+                    <span><i class="fa fa-facebook"></i></span>
+                </a>
+                <a class="_blank" href="#" target="_blank">
+                    <span><i class="fa fa-instagram"></i></span>
+                </a>
+                <a class="_blank" href="#" rel="publisher" target="_blank">
+                    <span><i class="fa fa-google"></i></span>
+                </a>
+            </div> 
+            <hr width="100%">
+        </div>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="src/Watch.jpg" height="350px" style="width:100%">
+              <div class="text">WATCHES</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="src/Bag.jpg"  height="350px"  style="width:100%">
+              <div class="text">LUXURY BAGS</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="src/Perfume.jpg"  height="350px"  style="width:100%">
+              <div class="text">PERFUMES</div>
+            </div>
+            
+        </div>
+            <br>
+            
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+        <br>
+        <div class="container">
+            <div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
+                <span style="font-size: 30px; background-color: black; padding: 0 10px; color:white; border-radius: 10px;">
+                  Our Products
+                </span>
+              </div>    
+        </div>
+        <div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center"></div>
+        <br>
+        <br>
+        <div class="footer">
+            
+            <h3> Gifts Gallery</h3>
+            <h5>Welcome to Gifts Gallery, one of the best accessories hubs.</h5>
+            
+            <div class="footer_contact_item">
+            <i aria-hidden="true" class="fa fa-map-marker"></i>
+            Address:
+            Mahim E, Mumbai, IN
+            </div>
+            <div class="footer_contact_item">
+            <i class="fa fa-phone"></i>
+            Phone: 0123-456-789
+            </div>
+            <div class="footer_contact_item">
+                <a href="mailto:sales@yourcompany.com" color="white">
+                    <i  aria-hidden="true" class="fa fa-envelope"></i>
+                    Email:  sales@yourcompany.com
+                </a>
+            </div>
+        </div>
+        </body>
+        <script>
+            var slideIndex = 0;
+            showSlides();
+        
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+                </script>
+    </html>
