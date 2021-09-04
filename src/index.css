@@ -124,8 +124,93 @@ header {
   @media only screen and (max-width: 300px) {
     .text {font-size: 11px}
     #ourprod{font-size: 11px}
+    #Gallery{font-size: 11px}
   }  
-
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+  }
+  .column p>img{
+      height: 150px;
+      width: 100%;
+  }
+  .row{
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width:600px) {
+    .column {
+      width: 40%;
+      margin: 10px !important;
+      padding: 5px;
+    }
+    .column h2{
+        margin: 0px;
+      }
+      .column p>img{
+        width: 100%;
+      }
+    .row{
+        margin: 10px 10px 0px 10px;
+    }
+  }
+  /*Images rows columns*/
+  .rowImg {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .columnImg {
+    flex: 33%;
+    max-width: 33%;
+    padding: 0 4px;
+  }
+  
+  .columnImg img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    height: 300px;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .columnImg {
+      flex: 50%;
+      max-width: 50%;
+    }
+    .columnImg img {
+        height: 200px;
+      }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+      
+    .text {font-size: 11px}
+    #ourprod{font-size: 11px}
+    #Gallery{font-size: 11px}
+    .columnImg {
+      flex: 33%;
+      max-width: 33%;
+    }
+    .columnImg img {
+        height: 100px;
+      }
+  }
   .footer{
       margin-top: 20px;
       background-color: black ;
