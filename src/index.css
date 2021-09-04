@@ -59,13 +59,13 @@ header {
   }
   * {box-sizing: border-box;}
   body {font-family: Verdana, sans-serif;}
-  .mySlides {display: none;}
+  .mySlides {display: none;width: 100%;}
   img {vertical-align: middle;}
   /* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
     position: relative;
     margin: auto;
+    width: 100%;
   }
 /* Caption text */
 .text {
@@ -123,6 +123,7 @@ header {
   /* On smaller screens, decrease text size */
   @media only screen and (max-width: 300px) {
     .text {font-size: 11px}
+    #ourprod{font-size: 11px}
   }  
 
   .footer{
