@@ -12,7 +12,7 @@
     </head>
     <body>
         <div class="header">
-            <a href="#default" class="logo">Gifts Gallery</a>
+            <a href="#default" class="logo">Covid Fighter</a>
             <div class="header-right">
                 <a class="_blank" href="mailto:sales@yourcompany.com" target="_blank">
                     <span><i class="fa fa-facebook"></i></span>
@@ -91,6 +91,9 @@
                     <p><img src="src/Watch.jpg" ></p>
                   </div>
               </div>  
+              
+            <div class="loader" id="loaderID" display="none"></div>
+
               <div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
                 <span id="Gallery" style="font-size: 30px; background-color: black; padding: 0 10px; color:white; border-radius: 10px;">
                   Gallery
@@ -266,6 +269,9 @@
             }
             //for Column click
             function openCategory(evt, cityName) {
+              //show loader
+                document.getElementById("loaderID").style.display = "block";
+                var i, tabcontent, tablinks;
                 var i, tabcontent, tablinks;
                 tabcontent = document.getElementsByClassName("tabcontent");
                 for (i = 0; i < tabcontent.length; i++) {
@@ -277,6 +283,8 @@
                 }
                 document.getElementById(cityName).style.display = "block";
                 evt.currentTarget.className += " active";
+                //hide loader
+              setTimeout(() => { document.getElementById("loaderID").style.display = "none"},1300);
             };  
             document.getElementById("defaultOpen").click();
             
